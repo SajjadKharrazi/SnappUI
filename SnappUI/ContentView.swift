@@ -67,33 +67,31 @@ struct ContentView : View {
                             .offset(y: -30)
                     }
                 }
-                if self.state != .price {
+                if self.state == .price {
                     VStack {
-                        Text(!self.showDestinationMarker ? "۱۶ اسنپ موجود" : "مبدا:").background(Color.green)
+                        Text(!self.showDestinationMarker ? "۱۶ اسنپ موجود" : "مبدا:")
                         ZStack {
                             Image(systemName: "video")
                                 .frame(width: 35)
-                                .foregroundColor(.green)
                                 .background(Color.white)
                         }
                             .frame(width:300, height: 2)
                             .background(Color.gray)
-                        Text(!self.showDestinationMarker ? "مبدا:" : "مقصد:" ).background(Color.red)
+                        Text(!self.showDestinationMarker ? "مبدا:" : "مقصد:" )
                     }
                         .frame(height: 80)
                         .padding(10)
-//                    .background(Color.green)
                 }
-//                if self.state == .price {
-//                    ScrollView(.horizontal,showsIndicators: false) {
-//                        HStack {
-//                            VStack {
-//                                Text("100000")
-//                            }
-//                        }
-//                    }
-//                    .frame(height: 200)
-//                }
+                if self.state != .price {
+                    ScrollView(.horizontal,showsIndicators: false) {
+                        HStack {
+                            VStack {
+                                Text("100000")
+                            }
+                        }
+                    }
+                    .frame(height: 200)
+                }
             }
                 .navigationBarTitle(Text(!self.showDestinationMarker ? "کجا هستید؟" : "کجا می‌روید؟"), displayMode: .inline)
                 .navigationBarItems(
