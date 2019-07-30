@@ -32,16 +32,18 @@ struct ContentView : View {
                 ZStack {
                     ZStack(alignment: .bottomTrailing) {
                         MapView(locationManager: $locationManager, userLocation: $location, annotations: $annotations, state: $state)
-                        Button(action: {
-                            self.getUserLocation()
-                        }){
-                            Image(systemName: "location.fill")
-                                .frame(width: 60, height: 60)
-                                .background(Color.white)
-                                .foregroundColor(.black)
-                                .clipShape(Circle())
-                                .shadow(radius: 2, x:0, y: 3)
-                                .offset(x: -30, y: -30)
+                        if self.state != .price {
+                            Button(action: {
+                                self.getUserLocation()
+                            }){
+                                Image(systemName: "location.fill")
+                                    .frame(width: 60, height: 60)
+                                    .background(Color.white)
+                                    .foregroundColor(.black)
+                                    .clipShape(Circle())
+                                    .shadow(radius: 2, x:0, y: 3)
+                                    .offset(x: -30, y: -30)
+                            }
                         }
                     }
                     if self.state == .source {
@@ -67,9 +69,7 @@ struct ContentView : View {
                 }
                 if self.state != .price {
                     VStack {
-                        Text(!self.showDestinationMarker ? "۱۶ اسنپ موجود" : "مبدا:")
-                        
-                        Spacer()
+                        Text(!self.showDestinationMarker ? "۱۶ اسنپ موجود" : "مبدا:").background(Color.green)
                         ZStack {
                             Image(systemName: "video")
                                 .frame(width: 35)
@@ -78,52 +78,21 @@ struct ContentView : View {
                         }
                             .frame(width:300, height: 2)
                             .background(Color.gray)
-                        Spacer()
-                        Text(!self.showDestinationMarker ? "مبدا:" : "مقصد:" )
+                        Text(!self.showDestinationMarker ? "مبدا:" : "مقصد:" ).background(Color.red)
                     }
                         .frame(height: 80)
                         .padding(10)
-                        .background(Color.white)
+//                    .background(Color.green)
                 }
 //                if self.state == .price {
-                    ScrollView(.horizontal,showsIndicators: false) {
-                        HStack {
-                            VStack {
-                                Text("100000")
-                            }
-                            VStack {
-                                Text("200000")
-                            }
-                            VStack {
-                                Text("300000")
-                            }
-                            VStack {
-                                Text("400000")
-                            }
-                            VStack {
-                                Text("500000")
-                            }
-                            VStack {
-                                Text("600000")
-                            }
-                            VStack {
-                                Text("700000")
-                            }
-                            VStack {
-                                Text("800000")
-                            }
-                            VStack {
-                                Text("900000")
-                            }
-                            VStack {
-                                Text("1000000")
-                            }
-                            
-                        }
-                    }
-//                        .environment(\.layoutDirection, .rightToLeft)
-                        .frame(height: 200)
-                        .background(Color.white)
+//                    ScrollView(.horizontal,showsIndicators: false) {
+//                        HStack {
+//                            VStack {
+//                                Text("100000")
+//                            }
+//                        }
+//                    }
+//                    .frame(height: 200)
 //                }
             }
                 .navigationBarTitle(Text(!self.showDestinationMarker ? "کجا هستید؟" : "کجا می‌روید؟"), displayMode: .inline)
@@ -149,7 +118,7 @@ struct ContentView : View {
                                 self.annotations.removeLast()
                             }
                         }){
-                            Image(systemName: self.state == .price ? "xmark.circle.fill" : "magnifyingglass")
+                            Image(systemName: self.state == .price ? "xmark" : "magnifyingglass")
                                 .foregroundColor(.black)
                                 .font(.system(size: 25))
                         }
