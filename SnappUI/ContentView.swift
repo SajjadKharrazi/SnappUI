@@ -86,8 +86,21 @@ struct ContentView : View {
                     ScrollView(.horizontal,showsIndicators: false) {
                         HStack {
                             VStack {
-                                Text("100000")
+                                Image("economic").border(Color.black, width: 5, cornerRadius: 100)
+                                Text("به صرفه و فوری")
                             }
+                            VStack {
+                                                            Image("women").border(Color.black, width: 5, cornerRadius: 100)
+                                                            Text("ویژه بانوان")
+                                                        }
+                            VStack {
+                                                            Image("deliver").border(Color.black, width: 5, cornerRadius: 100)
+                                                            Text("موتور ویژه مرسولات")
+                                                        }
+                            VStack {
+                                                            Image("bike").border(Color.black, width: 5, cornerRadius: 100)
+                                                            Text("موتور ویژه مسافر")
+                                                        }
                         }
                     }
                     .frame(height: 200)
