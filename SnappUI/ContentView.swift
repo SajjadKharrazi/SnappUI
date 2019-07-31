@@ -87,40 +87,49 @@ struct ContentView : View {
                         ScrollView(.horizontal,showsIndicators: false) {
                             HStack {
                                 VStack {
-                                    Image("economic").padding(5).border(Color.black, width: 5, cornerRadius: 200)
+                                    Image("economic").resizable().frame(width:110, height:110).padding(4).border(Color.black, width: 4, cornerRadius: 200)
                                     Text("به صرفه و فوری")
                                 }
                                 .padding(16)
                                 VStack {
-                                    Image("women").padding(5).border(Color.black, width: 5, cornerRadius: 100)
-                                    Text("ویژه بانوان")
+                                    Image("women").resizable().frame(width:110, height:110).padding(4).border(Color(red:242/255 ,green:242/255 , blue:242/255, opacity:1.0), width: 4, cornerRadius: 100)
+                                    Text("ویژه بانوان").foregroundColor(Color(red:168/255 ,green:168/255 , blue:168/255, opacity:1.0))
                                 }
                                 .padding(16)
                                 VStack {
-                                    Image("deliver").padding(5).border(Color.black, width: 5, cornerRadius: 100)
-                                    Text("موتور ویژه مرسولات")
+                                    Image("deliver").resizable().frame(width:110, height:110).padding(4).border(Color(red:242/255 ,green:242/255 , blue:242/255, opacity:1.0), width: 4, cornerRadius: 100)
+                                    Text("موتور ویژه مرسولات").foregroundColor(Color(red:168/255 ,green:168/255 , blue:168/255, opacity:1.0))
                                 }
                                 .padding(16)
                                 VStack {
-                                    Image("bike").padding(5).border(Color.black, width: 5, cornerRadius: 100)
-                                    Text("موتور ویژه مسافر")
+                                    Image("bike").resizable().frame(width:110, height:110).padding(4).border(Color(red:242/255 ,green:242/255 , blue:242/255, opacity:1.0), width: 4, cornerRadius: 100)
+                                    Text("موتور ویژه مسافر").foregroundColor(Color(red:168/255 ,green:168/255 , blue:168/255, opacity:1.0))
                                 }
                                 .padding(16)
                             }
                             .padding(16)
                         }
-                        .frame(height: 200)
+                        .frame(height: 175)
                         
                         HStack{
-                            Text("گزینه ها")
+                            Text("گزینه‌ها").frame(width:85)
+                            Image(uiImage: UIImage()).resizable().frame(width:1).background(Color(red:168/255 ,green:168/255 , blue:168/255, opacity:1.0))
                             Spacer()
                             Text("۱۱,۵۰۰")
                             Spacer()
-                            Text("کد تخفیف؟")
+                            Image(uiImage: UIImage()).resizable().frame(width:1).background(Color(red:168/255 ,green:168/255 , blue:168/255, opacity:1.0))
+                            Text("کد تخفیف؟").frame(width:85)
                         }
-                            .padding(16)
-                        .frame(height: 60)
-                        .background(Color.green)
+                            .frame(height: 55)
+                        
+                        HStack{
+                            Spacer()
+                            Text("درخواست اسنپ اکو")
+                                .frame(width: UIScreen.main.bounds.width - 190, height: 55)
+                                .background(Color(red:0/255 ,green:209/255 , blue:112/255, opacity:1.0)).foregroundColor(.white)
+                            Spacer()
+                        }
+                            .background(Color(red:21/255 ,green:31/255 , blue:51/255, opacity:1.0))
                     }
                 }
             }
