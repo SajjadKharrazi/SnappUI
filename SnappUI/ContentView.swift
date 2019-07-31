@@ -83,27 +83,45 @@ struct ContentView : View {
                         .padding(10)
                 }
                 if self.state != .price {
-                    ScrollView(.horizontal,showsIndicators: false) {
-                        HStack {
-                            VStack {
-                                Image("economic").border(Color.black, width: 5, cornerRadius: 100)
-                                Text("به صرفه و فوری")
+                    VStack {
+                        ScrollView(.horizontal,showsIndicators: false) {
+                            HStack {
+                                VStack {
+                                    Image("economic").padding(5).border(Color.black, width: 5, cornerRadius: 200)
+                                    Text("به صرفه و فوری")
+                                }
+                                .padding(16)
+                                VStack {
+                                    Image("women").padding(5).border(Color.black, width: 5, cornerRadius: 100)
+                                    Text("ویژه بانوان")
+                                }
+                                .padding(16)
+                                VStack {
+                                    Image("deliver").padding(5).border(Color.black, width: 5, cornerRadius: 100)
+                                    Text("موتور ویژه مرسولات")
+                                }
+                                .padding(16)
+                                VStack {
+                                    Image("bike").padding(5).border(Color.black, width: 5, cornerRadius: 100)
+                                    Text("موتور ویژه مسافر")
+                                }
+                                .padding(16)
                             }
-                            VStack {
-                                                            Image("women").border(Color.black, width: 5, cornerRadius: 100)
-                                                            Text("ویژه بانوان")
-                                                        }
-                            VStack {
-                                                            Image("deliver").border(Color.black, width: 5, cornerRadius: 100)
-                                                            Text("موتور ویژه مرسولات")
-                                                        }
-                            VStack {
-                                                            Image("bike").border(Color.black, width: 5, cornerRadius: 100)
-                                                            Text("موتور ویژه مسافر")
-                                                        }
+                            .padding(16)
                         }
+                        .frame(height: 200)
+                        
+                        HStack{
+                            Text("گزینه ها")
+                            Spacer()
+                            Text("۱۱,۵۰۰")
+                            Spacer()
+                            Text("کد تخفیف؟")
+                        }
+                            .padding(16)
+                        .frame(height: 60)
+                        .background(Color.green)
                     }
-                    .frame(height: 200)
                 }
             }
                 .navigationBarTitle(Text(!self.showDestinationMarker ? "کجا هستید؟" : "کجا می‌روید؟"), displayMode: .inline)
