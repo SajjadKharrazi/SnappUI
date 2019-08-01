@@ -25,6 +25,7 @@
 		B4AA0B2222F2D3240076063C /* Utility.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4AA0B2122F2D3240076063C /* Utility.swift */; };
 		B4AA0B2522F2EB270076063C /* Service.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4AA0B2422F2EB270076063C /* Service.swift */; };
 		B4E1119F22F3145200AD86E6 /* ServiceView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4E1119E22F3145200AD86E6 /* ServiceView.swift */; };
+		B4E111A122F36EA000AD86E6 /* PriceView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4E111A022F36EA000AD86E6 /* PriceView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -48,6 +49,7 @@
 		B4AA0B2122F2D3240076063C /* Utility.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utility.swift; sourceTree = "<group>"; };
 		B4AA0B2422F2EB270076063C /* Service.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Service.swift; path = ../../../../../../System/Volumes/Data/Users/sajjad/Desktop/SnappUI/SnappUI/Models/Service.swift; sourceTree = "<group>"; };
 		B4E1119E22F3145200AD86E6 /* ServiceView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ServiceView.swift; path = ../../../../../System/Volumes/Data/Users/sajjad/Desktop/SnappUI/SnappUI/ServiceView.swift; sourceTree = "<group>"; };
+		B4E111A022F36EA000AD86E6 /* PriceView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = PriceView.swift; path = ../../../../../System/Volumes/Data/Users/sajjad/Desktop/SnappUI/SnappUI/PriceView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -107,6 +109,7 @@
 				B42DA28122C74C6600E45CA3 /* Artwork.swift */,
 				B485F49622B41E36005BD895 /* Preview Content */,
 				B4E1119E22F3145200AD86E6 /* ServiceView.swift */,
+				B4E111A022F36EA000AD86E6 /* PriceView.swift */,
 			);
 			path = SnappUI;
 			sourceTree = "<group>";
@@ -208,6 +211,7 @@
 				B4AA0B2522F2EB270076063C /* Service.swift in Sources */,
 				B485F48F22B41E35005BD895 /* AppDelegate.swift in Sources */,
 				B42EC09622B42F1700F8F2FD /* CircleImage.swift in Sources */,
+				B4E111A122F36EA000AD86E6 /* PriceView.swift in Sources */,
 				B42EC09822B4303A00F8F2FD /* MapView.swift in Sources */,
 				B485F49122B41E35005BD895 /* SceneDelegate.swift in Sources */,
 				B42DA28222C74C6600E45CA3 /* Artwork.swift in Sources */,
