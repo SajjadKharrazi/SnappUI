@@ -34,7 +34,7 @@ struct ContentView : View {
                     ZStack {
                         ZStack(alignment: .bottomTrailing) {
                             MapView(locationManager: self.$locationManager, userLocation: self.$location, annotations: self.$annotations, state: self.$state)
-                            if self.state != .price {
+                            if self.state == .source {
                                 Button(action: {
                                     self.getUserLocation()
                                 }){
