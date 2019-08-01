@@ -41,12 +41,12 @@ struct PriceView: View {
             
             HStack{
                 Text("گزینه‌ها").frame(width:85).foregroundColor(.snappForeground).font(.custom("IRANSansMobileFaNum-Bold",size: 16))
-                Image(uiImage: UIImage()).resizable().frame(width:1).background(Color(red:168/255 ,green:168/255 , blue:168/255, opacity:1.0))
+                Image(uiImage: UIImage()).resizable().frame(width:1).background(Color.snappTextDisabled)
                 Spacer()
-                Text("ریال").foregroundColor(.snappTextDisabled)
+                Text("ریال").minimumScaleFactor(0.01).foregroundColor(.snappTextDisabled)
                 Text("\(self.showPrice)").foregroundColor(.snappBackground).font(.custom("IRANSansMobileFaNum-Medium",size: 25))
                 Spacer()
-                Image(uiImage: UIImage()).resizable().frame(width:1).background(Color(red:168/255 ,green:168/255 , blue:168/255, opacity:1.0))
+                Image(uiImage: UIImage()).resizable().frame(width:1).background(Color.snappTextDisabled)
                 Text("کد تخفیف؟").frame(width:85).foregroundColor(.snappForeground).font(.custom("IRANSansMobileFaNum-Bold",size: 16))
             }
             .frame(height: 45)
@@ -61,12 +61,14 @@ struct PriceView: View {
                 Spacer()
             }
             .background(Color.snappBackground)
+        }.onAppear {
+            self.changePrice(service: self.services[0])
         }
     }
     
     
     
-    func changePrice(service: Service){
+    private func changePrice(service: Service){
         var defaultServices: [Service] = []
         
         for defaultService in self.services {
@@ -82,7 +84,7 @@ struct PriceView: View {
         self.services = defaultServices
     }
     
-    func animatePrice(to: Int){
+    private func animatePrice(to: Int){
         self.showPrice = 0
         var i = 0
         DispatchQueue.global().async {
