@@ -16,6 +16,11 @@ enum SnappState {
     case price
 }
 
+struct Result {
+    var id = UUID()
+    var score: Int
+}
+
 struct ContentView : View {
     
     @State var locationManager = CLLocationManager()
@@ -25,6 +30,14 @@ struct ContentView : View {
     @State private var showSourceMarker = true
     @State private var isUserInteractionEnabled = true
     @State private var state: SnappState = .source
+    
+    @State private var services: [Service] = [
+        Service(id: 0, name: "به صرفه و فوری", type: "economic", image: "economic", selected: true),
+        Service(id: 1, name: "ویژه بانوان", type: "women", image: "women"),
+        Service(id: 2, name: "موتور ویژه مرسولات", type: "deliver", image: "deliver"),
+        Service(id: 3, name: "موتور ویژه مسافر", type: "bike", image: "bike")
+    ]
+    let results = [Result(score: 8), Result(score: 5), Result(score: 10)]
     
     var body: some View {
         NavigationView {
@@ -83,53 +96,62 @@ struct ContentView : View {
                         .padding(10)
                 }
                 if self.state != .price {
+//                    VStack {
+//                        ForEach(results.identified(by: \.id)) { result in
+//                            Button(action: {
+//                                print(result.score)
+//                                //                                print("\(result.name)")
+//                                //                                self.state = .price
+//                                //                                self.annotations.append(Artwork(coordinate: self.location, tag: .destination))
+//                            }){
+//                                Text("\(result.score)")
+//                                //                                print(result.name)
+//                                //                                VStack {
+//                                //                                    Image("women").renderingMode(.original).resizable().frame(width:110, height:110).padding(4).border(Color.black, width: 4, cornerRadius: 200)
+//                                //                                    Text(result.name).foregroundColor(.black)
+//                                //                                }
+//                            }
+//                            .padding(16)
+//                            Text("Result: \(result.score)")
+//                        }
+//                    }
                     VStack {
                         ScrollView(.horizontal,showsIndicators: false) {
                             HStack {
-                                VStack {
-                                    Image("economic").resizable().frame(width:110, height:110).padding(4).border(Color.black, width: 4, cornerRadius: 200)
-                                    Text("به صرفه و فوری")
+                                ForEach(services) { service in
+                                    Button(action: {
+                                        self.changePrice(service: service)
+                                    }){
+                                        ServiceView(service: service)
+                                    }
+                                    .padding(16)
                                 }
-                                .padding(16)
-                                VStack {
-                                    Image("women").resizable().frame(width:110, height:110).padding(4).border(Color(red:242/255 ,green:242/255 , blue:242/255, opacity:1.0), width: 4, cornerRadius: 100)
-                                    Text("ویژه بانوان").foregroundColor(Color(red:168/255 ,green:168/255 , blue:168/255, opacity:1.0))
-                                }
-                                .padding(16)
-                                VStack {
-                                    Image("deliver").resizable().frame(width:110, height:110).padding(4).border(Color(red:242/255 ,green:242/255 , blue:242/255, opacity:1.0), width: 4, cornerRadius: 100)
-                                    Text("موتور ویژه مرسولات").foregroundColor(Color(red:168/255 ,green:168/255 , blue:168/255, opacity:1.0))
-                                }
-                                .padding(16)
-                                VStack {
-                                    Image("bike").resizable().frame(width:110, height:110).padding(4).border(Color(red:242/255 ,green:242/255 , blue:242/255, opacity:1.0), width: 4, cornerRadius: 100)
-                                    Text("موتور ویژه مسافر").foregroundColor(Color(red:168/255 ,green:168/255 , blue:168/255, opacity:1.0))
-                                }
-                                .padding(16)
                             }
                             .padding(16)
                         }
                         .frame(height: 175)
                         
                         HStack{
-                            Text("گزینه‌ها").frame(width:85)
+                            Text("گزینه‌ها").frame(width:85).foregroundColor(.snappForeground).font(.custom("IRANSansMobileFaNum-Bold",size: 16))
                             Image(uiImage: UIImage()).resizable().frame(width:1).background(Color(red:168/255 ,green:168/255 , blue:168/255, opacity:1.0))
                             Spacer()
-                            Text("۱۱,۵۰۰")
+                            Text("ریال").foregroundColor(.snappTextDisabled)
+                            Text("۱۱۵,۰۰۰").foregroundColor(.snappBackground).font(.custom("IRANSansMobileFaNum-Medium",size: 25))
                             Spacer()
                             Image(uiImage: UIImage()).resizable().frame(width:1).background(Color(red:168/255 ,green:168/255 , blue:168/255, opacity:1.0))
-                            Text("کد تخفیف؟").frame(width:85)
+                            Text("کد تخفیف؟").frame(width:85).foregroundColor(.snappForeground).font(.custom("IRANSansMobileFaNum-Bold",size: 16))
                         }
-                            .frame(height: 55)
+                        .frame(height: 45)
                         
                         HStack{
                             Spacer()
                             Text("درخواست اسنپ اکو")
+                                .font(.custom("IRANSansMobileFaNum-Bold",size: 18))
                                 .frame(width: UIScreen.main.bounds.width - 190, height: 55)
-                                .background(Color(red:0/255 ,green:209/255 , blue:112/255, opacity:1.0)).foregroundColor(.white)
+                                .background(Color.snappForeground).foregroundColor(.white)
                             Spacer()
                         }
-                            .background(Color(red:21/255 ,green:31/255 , blue:51/255, opacity:1.0))
+                        .background(Color.snappBackground)
                     }
                 }
             }
@@ -169,6 +191,20 @@ struct ContentView : View {
     
     func getUserLocation(){
         self.locationManager.startUpdatingLocation()
+    }
+    
+    func changePrice(service: Service){
+        var defaultServices: [Service] = []
+        
+        for defaultService in self.services {
+            if defaultService.type == service.type {
+                defaultServices.append(Service(id: defaultService.id, name: defaultService.name, type: defaultService.type, image: defaultService.image, selected: true))
+            } else {
+                defaultServices.append(Service(id: defaultService.id, name: defaultService.name, type: defaultService.type, image: defaultService.image, selected: false))
+            }
+        }
+        
+        self.services = defaultServices
     }
 }
 

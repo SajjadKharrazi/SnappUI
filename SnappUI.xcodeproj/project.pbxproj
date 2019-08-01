@@ -22,6 +22,9 @@
 		B485F49522B41E36005BD895 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B485F49422B41E36005BD895 /* Assets.xcassets */; };
 		B485F49822B41E36005BD895 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B485F49722B41E36005BD895 /* Preview Assets.xcassets */; };
 		B485F49B22B41E36005BD895 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B485F49922B41E36005BD895 /* LaunchScreen.storyboard */; };
+		B4AA0B2222F2D3240076063C /* Utility.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4AA0B2122F2D3240076063C /* Utility.swift */; };
+		B4AA0B2522F2EB270076063C /* Service.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4AA0B2422F2EB270076063C /* Service.swift */; };
+		B4E1119F22F3145200AD86E6 /* ServiceView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4E1119E22F3145200AD86E6 /* ServiceView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -42,6 +45,9 @@
 		B485F49722B41E36005BD895 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		B485F49A22B41E36005BD895 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		B485F49C22B41E36005BD895 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B4AA0B2122F2D3240076063C /* Utility.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utility.swift; sourceTree = "<group>"; };
+		B4AA0B2422F2EB270076063C /* Service.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Service.swift; path = ../../../../../../System/Volumes/Data/Users/sajjad/Desktop/SnappUI/SnappUI/Models/Service.swift; sourceTree = "<group>"; };
+		B4E1119E22F3145200AD86E6 /* ServiceView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ServiceView.swift; path = ../../../../../System/Volumes/Data/Users/sajjad/Desktop/SnappUI/SnappUI/ServiceView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -87,7 +93,9 @@
 		B485F48D22B41E35005BD895 /* SnappUI */ = {
 			isa = PBXGroup;
 			children = (
+				B4AA0B2322F2EB170076063C /* Models */,
 				B43E00B622BD64BD0060621D /* Fonts */,
+				B4AA0B2122F2D3240076063C /* Utility.swift */,
 				B485F48E22B41E35005BD895 /* AppDelegate.swift */,
 				B485F49022B41E35005BD895 /* SceneDelegate.swift */,
 				B485F49222B41E35005BD895 /* ContentView.swift */,
@@ -98,6 +106,7 @@
 				B485F49C22B41E36005BD895 /* Info.plist */,
 				B42DA28122C74C6600E45CA3 /* Artwork.swift */,
 				B485F49622B41E36005BD895 /* Preview Content */,
+				B4E1119E22F3145200AD86E6 /* ServiceView.swift */,
 			);
 			path = SnappUI;
 			sourceTree = "<group>";
@@ -108,6 +117,14 @@
 				B485F49722B41E36005BD895 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		B4AA0B2322F2EB170076063C /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				B4AA0B2422F2EB270076063C /* Service.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -187,11 +204,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B4AA0B2222F2D3240076063C /* Utility.swift in Sources */,
+				B4AA0B2522F2EB270076063C /* Service.swift in Sources */,
 				B485F48F22B41E35005BD895 /* AppDelegate.swift in Sources */,
 				B42EC09622B42F1700F8F2FD /* CircleImage.swift in Sources */,
 				B42EC09822B4303A00F8F2FD /* MapView.swift in Sources */,
 				B485F49122B41E35005BD895 /* SceneDelegate.swift in Sources */,
 				B42DA28222C74C6600E45CA3 /* Artwork.swift in Sources */,
+				B4E1119F22F3145200AD86E6 /* ServiceView.swift in Sources */,
 				B485F49322B41E35005BD895 /* ContentView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
