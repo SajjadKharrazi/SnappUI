@@ -69,20 +69,7 @@ struct ContentView : View {
                         }
                     }
                     if self.state != .price {
-                        VStack {
-                            Text(self.state == .source ? "۱۶ اسنپ موجود" : "مبدا:")
-                            ZStack {
-                                Image(systemName: "video")
-                                    .frame(width: 35)
-                                    .foregroundColor(.snappForeground)
-                                    .background(Color.white)
-                            }
-                            .frame(width:300, height: 2)
-                                .background(Color.snappTextDisabled)
-                            Text(self.state == .source ? "مبدا:" : "مقصد:" )
-                        }
-                        .frame(height: 80)
-                            .padding(10)
+                        InformationView(state: self.$state, geometry: geometry)
                     }
                     if self.state == .price {
                         PriceView(geometry: geometry)
