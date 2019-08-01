@@ -57,8 +57,7 @@ struct ContentView : View {
                                     .renderingMode(.original)
                             }
                             .offset(y: -30)
-                        }
-                        if self.state == .destination {
+                        } else if self.state == .destination {
                             Button(action: {
                                 self.state = .price
                                 self.annotations.append(Artwork(coordinate: self.location, tag: .destination))
@@ -71,15 +70,16 @@ struct ContentView : View {
                     }
                     if self.state != .price {
                         VStack {
-                            Text(!self.showDestinationMarker ? "۱۶ اسنپ موجود" : "مبدا:")
+                            Text(self.state == .source ? "۱۶ اسنپ موجود" : "مبدا:")
                             ZStack {
                                 Image(systemName: "video")
                                     .frame(width: 35)
+                                    .foregroundColor(.snappForeground)
                                     .background(Color.white)
                             }
                             .frame(width:300, height: 2)
-                                .background(Color.gray)
-                            Text(!self.showDestinationMarker ? "مبدا:" : "مقصد:" )
+                                .background(Color.snappTextDisabled)
+                            Text(self.state == .source ? "مبدا:" : "مقصد:" )
                         }
                         .frame(height: 80)
                             .padding(10)

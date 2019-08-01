@@ -48,8 +48,8 @@
 		B485F49C22B41E36005BD895 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B4AA0B2122F2D3240076063C /* Utility.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utility.swift; sourceTree = "<group>"; };
 		B4AA0B2422F2EB270076063C /* Service.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Service.swift; path = ../../../../../../System/Volumes/Data/Users/sajjad/Desktop/SnappUI/SnappUI/Models/Service.swift; sourceTree = "<group>"; };
-		B4E1119E22F3145200AD86E6 /* ServiceView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ServiceView.swift; path = ../../../../../System/Volumes/Data/Users/sajjad/Desktop/SnappUI/SnappUI/ServiceView.swift; sourceTree = "<group>"; };
-		B4E111A022F36EA000AD86E6 /* PriceView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = PriceView.swift; path = ../../../../../System/Volumes/Data/Users/sajjad/Desktop/SnappUI/SnappUI/PriceView.swift; sourceTree = "<group>"; };
+		B4E1119E22F3145200AD86E6 /* ServiceView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceView.swift; sourceTree = "<group>"; };
+		B4E111A022F36EA000AD86E6 /* PriceView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PriceView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -95,6 +95,7 @@
 		B485F48D22B41E35005BD895 /* SnappUI */ = {
 			isa = PBXGroup;
 			children = (
+				B4E111A222F3821800AD86E6 /* Views */,
 				B4AA0B2322F2EB170076063C /* Models */,
 				B43E00B622BD64BD0060621D /* Fonts */,
 				B4AA0B2122F2D3240076063C /* Utility.swift */,
@@ -108,8 +109,6 @@
 				B485F49C22B41E36005BD895 /* Info.plist */,
 				B42DA28122C74C6600E45CA3 /* Artwork.swift */,
 				B485F49622B41E36005BD895 /* Preview Content */,
-				B4E1119E22F3145200AD86E6 /* ServiceView.swift */,
-				B4E111A022F36EA000AD86E6 /* PriceView.swift */,
 			);
 			path = SnappUI;
 			sourceTree = "<group>";
@@ -128,6 +127,23 @@
 				B4AA0B2422F2EB270076063C /* Service.swift */,
 			);
 			path = Models;
+			sourceTree = "<group>";
+		};
+		B4E111A222F3821800AD86E6 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				B4E111A322F3821F00AD86E6 /* PriceSection */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		B4E111A322F3821F00AD86E6 /* PriceSection */ = {
+			isa = PBXGroup;
+			children = (
+				B4E111A022F36EA000AD86E6 /* PriceView.swift */,
+				B4E1119E22F3145200AD86E6 /* ServiceView.swift */,
+			);
+			path = PriceSection;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
