@@ -15,7 +15,7 @@ struct InformationView: View {
     
     var body: some View {
         VStack {
-            Text(self.state == .source ? "۱۶ اسنپ موجود" : "مبدا:")
+            Text(self.state == .source ? "۱۶ اسنپ موجود" : "مبدا:").animation(.easeIn(duration: 0.5))
             ZStack {
                 Image(systemName: "video")
                     .frame(width: 35)
@@ -24,7 +24,7 @@ struct InformationView: View {
             }
             .frame(width:300, height: 2)
                 .background(Color.snappTextDisabled)
-            Text(self.state == .source ? "مبدا:" : "مقصد:" )
+            Text(self.state == .source ? "مبدا:" : "مقصد:" ).animation(.easeIn(duration: 0.5))
         }
             .frame(height: 80 + geometry.safeAreaInsets.bottom/2)
             .padding(10)
