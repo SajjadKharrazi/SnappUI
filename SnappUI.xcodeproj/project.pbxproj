@@ -7,8 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		B42DA28222C74C6600E45CA3 /* Artwork.swift in Sources */ = {isa = PBXBuildFile; fileRef = B42DA28122C74C6600E45CA3 /* Artwork.swift */; };
-		B42EC09622B42F1700F8F2FD /* CircleImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = B42EC09522B42F1700F8F2FD /* CircleImage.swift */; };
 		B42EC09822B4303A00F8F2FD /* MapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B42EC09722B4303A00F8F2FD /* MapView.swift */; };
 		B43E00B022BD64B30060621D /* IRANSansMobile_Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B43E00AA22BD64B20060621D /* IRANSansMobile_Light.ttf */; };
 		B43E00B122BD64B30060621D /* IRANSansMobile_Black.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B43E00AB22BD64B20060621D /* IRANSansMobile_Black.ttf */; };
@@ -31,11 +29,11 @@
 		B4E679C022F46A4100C5BE92 /* PriceActionsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4E679BF22F46A4100C5BE92 /* PriceActionsView.swift */; };
 		B4E679C222F46AB800C5BE92 /* RequestSnappView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4E679C122F46AB800C5BE92 /* RequestSnappView.swift */; };
 		B4E679C522F46D3400C5BE92 /* LeadingNavigationBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4E679C422F46D3400C5BE92 /* LeadingNavigationBarView.swift */; };
+		B4E679C822F46EFF00C5BE92 /* Artwork.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4E679C722F46EFE00C5BE92 /* Artwork.swift */; };
+		B4E679CA22F46F3500C5BE92 /* MapBoxView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4E679C922F46F3500C5BE92 /* MapBoxView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		B42DA28122C74C6600E45CA3 /* Artwork.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Artwork.swift; sourceTree = "<group>"; };
-		B42EC09522B42F1700F8F2FD /* CircleImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircleImage.swift; sourceTree = "<group>"; };
 		B42EC09722B4303A00F8F2FD /* MapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapView.swift; sourceTree = "<group>"; };
 		B43E00AA22BD64B20060621D /* IRANSansMobile_Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = IRANSansMobile_Light.ttf; sourceTree = "<group>"; };
 		B43E00AB22BD64B20060621D /* IRANSansMobile_Black.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = IRANSansMobile_Black.ttf; sourceTree = "<group>"; };
@@ -60,6 +58,8 @@
 		B4E679BF22F46A4100C5BE92 /* PriceActionsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = PriceActionsView.swift; path = ../../../../../../../System/Volumes/Data/Users/sajjad/Desktop/SnappUI/SnappUI/Views/PriceSection/PriceActionsView.swift; sourceTree = "<group>"; };
 		B4E679C122F46AB800C5BE92 /* RequestSnappView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = RequestSnappView.swift; path = ../../../../../../../System/Volumes/Data/Users/sajjad/Desktop/SnappUI/SnappUI/Views/PriceSection/RequestSnappView.swift; sourceTree = "<group>"; };
 		B4E679C422F46D3400C5BE92 /* LeadingNavigationBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = LeadingNavigationBarView.swift; path = ../../../../../../../System/Volumes/Data/Users/sajjad/Desktop/SnappUI/SnappUI/Views/NavigationBarSection/LeadingNavigationBarView.swift; sourceTree = "<group>"; };
+		B4E679C722F46EFE00C5BE92 /* Artwork.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Artwork.swift; sourceTree = "<group>"; };
+		B4E679C922F46F3500C5BE92 /* MapBoxView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = MapBoxView.swift; path = ../../../../../../../System/Volumes/Data/Users/sajjad/Desktop/SnappUI/SnappUI/Views/MapSection/MapBoxView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -113,11 +113,8 @@
 				B485F49022B41E35005BD895 /* SceneDelegate.swift */,
 				B485F49222B41E35005BD895 /* ContentView.swift */,
 				B485F49422B41E36005BD895 /* Assets.xcassets */,
-				B42EC09522B42F1700F8F2FD /* CircleImage.swift */,
-				B42EC09722B4303A00F8F2FD /* MapView.swift */,
 				B485F49922B41E36005BD895 /* LaunchScreen.storyboard */,
 				B485F49C22B41E36005BD895 /* Info.plist */,
-				B42DA28122C74C6600E45CA3 /* Artwork.swift */,
 				B485F49622B41E36005BD895 /* Preview Content */,
 			);
 			path = SnappUI;
@@ -134,6 +131,7 @@
 		B4AA0B2322F2EB170076063C /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				B4E679C722F46EFE00C5BE92 /* Artwork.swift */,
 				B4AA0B2422F2EB270076063C /* Service.swift */,
 			);
 			path = Models;
@@ -142,6 +140,7 @@
 		B4E111A222F3821800AD86E6 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				B4E679C622F46EC100C5BE92 /* MapSection */,
 				B4E679C322F46CF800C5BE92 /* NavigationBarSection */,
 				B4E111A422F384BF00AD86E6 /* InformationSection */,
 				B4E111A322F3821F00AD86E6 /* PriceSection */,
@@ -175,6 +174,15 @@
 				B4E679C422F46D3400C5BE92 /* LeadingNavigationBarView.swift */,
 			);
 			path = NavigationBarSection;
+			sourceTree = "<group>";
+		};
+		B4E679C622F46EC100C5BE92 /* MapSection */ = {
+			isa = PBXGroup;
+			children = (
+				B42EC09722B4303A00F8F2FD /* MapView.swift */,
+				B4E679C922F46F3500C5BE92 /* MapBoxView.swift */,
+			);
+			path = MapSection;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -254,16 +262,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B4E679CA22F46F3500C5BE92 /* MapBoxView.swift in Sources */,
 				B4AA0B2222F2D3240076063C /* Utility.swift in Sources */,
 				B4E111A622F384D000AD86E6 /* InformationBoxView.swift in Sources */,
+				B4E679C822F46EFF00C5BE92 /* Artwork.swift in Sources */,
 				B4AA0B2522F2EB270076063C /* Service.swift in Sources */,
 				B485F48F22B41E35005BD895 /* AppDelegate.swift in Sources */,
-				B42EC09622B42F1700F8F2FD /* CircleImage.swift in Sources */,
 				B4E111A122F36EA000AD86E6 /* PriceBoxView.swift in Sources */,
 				B42EC09822B4303A00F8F2FD /* MapView.swift in Sources */,
 				B485F49122B41E35005BD895 /* SceneDelegate.swift in Sources */,
 				B4E679BE22F4696200C5BE92 /* ServiceListView.swift in Sources */,
-				B42DA28222C74C6600E45CA3 /* Artwork.swift in Sources */,
 				B4E679C522F46D3400C5BE92 /* LeadingNavigationBarView.swift in Sources */,
 				B4E1119F22F3145200AD86E6 /* ServiceView.swift in Sources */,
 				B4E679C022F46A4100C5BE92 /* PriceActionsView.swift in Sources */,

@@ -18,57 +18,15 @@ enum SnappState {
 
 struct ContentView : View {
     
-    @State var locationManager = CLLocationManager()
     @State var location = CLLocationCoordinate2D(latitude: 35.729255, longitude: 51.352264)
     @State private var annotations: [Artwork] = []
-    @State private var showDestinationMarker = false
-    @State private var showSourceMarker = true
-    @State private var isUserInteractionEnabled = true
     @State private var state: SnappState = .source
-    
     
     var body: some View {
         NavigationView {
             GeometryReader { geometry in
                 VStack {
-                    ZStack {
-                        ZStack(alignment: .bottomTrailing) {
-                            MapView(locationManager: self.$locationManager, userLocation: self.$location, annotations: self.$annotations, state: self.$state)
-                            if self.state == .source {
-                                Button(action: {
-                                    self.getUserLocation()
-                                }){
-                                    Image(systemName: "location.fill")
-                                        .frame(width: 60, height: 60)
-                                        .background(Color.white)
-                                        .foregroundColor(.black)
-                                        .clipShape(Circle())
-                                        .shadow(radius: 2, x:0, y: 3)
-                                        .offset(x: -30, y: -30)
-                                }
-                                .animation(.easeIn(duration: 0.5))
-                            }
-                        }
-                        if self.state == .source {
-                            Button(action: {
-                                self.state = .destination
-                                self.annotations.append(Artwork(coordinate: self.location, tag: .source))
-                            }){
-                                Image("sourceMarker")
-                                    .renderingMode(.original)
-                            }
-                            .offset(y: -30)
-                        } else if self.state == .destination {
-                            Button(action: {
-                                self.state = .price
-                                self.annotations.append(Artwork(coordinate: self.location, tag: .destination))
-                            }){
-                                Image("destinationMarker")
-                                    .renderingMode(.original)
-                            }
-                            .offset(y: -30)
-                        }
-                    }
+                    MapBoxView(location: self.$location, annotations: self.$annotations, state: self.$state)
                     if self.state != .price {
                         InformationBoxView(state: self.$state, geometry: geometry)
                     }
@@ -85,10 +43,6 @@ struct ContentView : View {
             )
         }
         .font(.custom("IRANSansMobileFaNum",size: 16))
-    }
-    
-    func getUserLocation(){
-        self.locationManager.startUpdatingLocation()
     }
 }
 
