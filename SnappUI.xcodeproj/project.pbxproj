@@ -30,6 +30,7 @@
 		B4E679BE22F4696200C5BE92 /* ServiceListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4E679BD22F4696200C5BE92 /* ServiceListView.swift */; };
 		B4E679C022F46A4100C5BE92 /* PriceActionsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4E679BF22F46A4100C5BE92 /* PriceActionsView.swift */; };
 		B4E679C222F46AB800C5BE92 /* RequestSnappView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4E679C122F46AB800C5BE92 /* RequestSnappView.swift */; };
+		B4E679C522F46D3400C5BE92 /* LeadingNavigationBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4E679C422F46D3400C5BE92 /* LeadingNavigationBarView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -58,6 +59,7 @@
 		B4E679BD22F4696200C5BE92 /* ServiceListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ServiceListView.swift; path = ../../../../../../../System/Volumes/Data/Users/sajjad/Desktop/SnappUI/SnappUI/Views/PriceSection/ServiceListView.swift; sourceTree = "<group>"; };
 		B4E679BF22F46A4100C5BE92 /* PriceActionsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = PriceActionsView.swift; path = ../../../../../../../System/Volumes/Data/Users/sajjad/Desktop/SnappUI/SnappUI/Views/PriceSection/PriceActionsView.swift; sourceTree = "<group>"; };
 		B4E679C122F46AB800C5BE92 /* RequestSnappView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = RequestSnappView.swift; path = ../../../../../../../System/Volumes/Data/Users/sajjad/Desktop/SnappUI/SnappUI/Views/PriceSection/RequestSnappView.swift; sourceTree = "<group>"; };
+		B4E679C422F46D3400C5BE92 /* LeadingNavigationBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = LeadingNavigationBarView.swift; path = ../../../../../../../System/Volumes/Data/Users/sajjad/Desktop/SnappUI/SnappUI/Views/NavigationBarSection/LeadingNavigationBarView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -140,6 +142,7 @@
 		B4E111A222F3821800AD86E6 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				B4E679C322F46CF800C5BE92 /* NavigationBarSection */,
 				B4E111A422F384BF00AD86E6 /* InformationSection */,
 				B4E111A322F3821F00AD86E6 /* PriceSection */,
 			);
@@ -164,6 +167,14 @@
 				B4E111A522F384D000AD86E6 /* InformationBoxView.swift */,
 			);
 			path = InformationSection;
+			sourceTree = "<group>";
+		};
+		B4E679C322F46CF800C5BE92 /* NavigationBarSection */ = {
+			isa = PBXGroup;
+			children = (
+				B4E679C422F46D3400C5BE92 /* LeadingNavigationBarView.swift */,
+			);
+			path = NavigationBarSection;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -253,6 +264,7 @@
 				B485F49122B41E35005BD895 /* SceneDelegate.swift in Sources */,
 				B4E679BE22F4696200C5BE92 /* ServiceListView.swift in Sources */,
 				B42DA28222C74C6600E45CA3 /* Artwork.swift in Sources */,
+				B4E679C522F46D3400C5BE92 /* LeadingNavigationBarView.swift in Sources */,
 				B4E1119F22F3145200AD86E6 /* ServiceView.swift in Sources */,
 				B4E679C022F46A4100C5BE92 /* PriceActionsView.swift in Sources */,
 				B485F49322B41E35005BD895 /* ContentView.swift in Sources */,

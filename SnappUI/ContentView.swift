@@ -80,32 +80,7 @@ struct ContentView : View {
                 .edgesIgnoringSafeArea(.bottom)
                 .navigationBarTitle(Text(self.state == .source ? "کجا هستید؟" : "کجا می‌روید؟"), displayMode: .inline)
                 .navigationBarItems(
-                    leading:
-                    HStack {
-                        if self.state == .destination {
-                            Button(action: {
-                                self.location = CLLocationCoordinate2D(latitude: self.annotations.first!.coordinate.latitude, longitude: self.annotations.first!.coordinate.longitude)
-                                self.state = .source
-                                self.annotations.removeAll()
-                            }){
-                                Image(systemName: "chevron.left")
-                                    .foregroundColor(.black)
-                                    .font(.system(size: 25))
-                            }
-                            .padding(.trailing,20)
-                        }
-                        Button(action: {
-                            if self.state == .price {
-                                self.location = CLLocationCoordinate2D(latitude: self.annotations.last!.coordinate.latitude, longitude: self.annotations.last!.coordinate.longitude)
-                                self.state = .destination
-                                self.annotations.removeLast()
-                            }
-                        }){
-                            Image(systemName: self.state == .price ? "xmark" : "magnifyingglass")
-                                .foregroundColor(.black)
-                                .font(.system(size: 25))
-                        }
-                    },
+                    leading: LeadingNavigationBarView(state: self.$state, annotations: self.$annotations, location: self.$location),
                     trailing: Image(systemName: "line.horizontal.3").font(.system(size: 25))
             )
         }
