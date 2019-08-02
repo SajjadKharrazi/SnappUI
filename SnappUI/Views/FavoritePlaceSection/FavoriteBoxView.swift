@@ -40,13 +40,7 @@ struct FavoriteBoxView: View {
                         .padding(.trailing,48)
                             .padding(.leading,16)
                     }
-                    HStack{
-                        Image(systemName: "plus").foregroundColor(.snappForeground)
-                        Text("افزودن آدرس منتخب").foregroundColor(.black).offset(x: -5, y:1)
-                    }
-                    .padding(.trailing,48)
-                        .padding(.leading,16)
-                    
+                    AddFavoriteButtonView()
                 }
             }
             .frame(height: 50)

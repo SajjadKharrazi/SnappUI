@@ -15,6 +15,7 @@
 		B43E00B422BD64B30060621D /* IRANSansMobile_Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B43E00AE22BD64B30060621D /* IRANSansMobile_Medium.ttf */; };
 		B43E00B522BD64B30060621D /* IRANSansMobile_Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B43E00AF22BD64B30060621D /* IRANSansMobile_Bold.ttf */; };
 		B47E091F22F49517006D8B86 /* FavoriteView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B47E091E22F49517006D8B86 /* FavoriteView.swift */; };
+		B47E092122F4AAE8006D8B86 /* AddFavoriteButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B47E092022F4AAE8006D8B86 /* AddFavoriteButtonView.swift */; };
 		B485F48F22B41E35005BD895 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B485F48E22B41E35005BD895 /* AppDelegate.swift */; };
 		B485F49122B41E35005BD895 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B485F49022B41E35005BD895 /* SceneDelegate.swift */; };
 		B485F49322B41E35005BD895 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B485F49222B41E35005BD895 /* ContentView.swift */; };
@@ -45,6 +46,7 @@
 		B43E00AE22BD64B30060621D /* IRANSansMobile_Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = IRANSansMobile_Medium.ttf; sourceTree = "<group>"; };
 		B43E00AF22BD64B30060621D /* IRANSansMobile_Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = IRANSansMobile_Bold.ttf; sourceTree = "<group>"; };
 		B47E091E22F49517006D8B86 /* FavoriteView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = FavoriteView.swift; path = ../../../../../../../System/Volumes/Data/Users/sajjad/Desktop/SnappUI/SnappUI/Views/FavoritePlaceSection/FavoriteView.swift; sourceTree = "<group>"; };
+		B47E092022F4AAE8006D8B86 /* AddFavoriteButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = AddFavoriteButtonView.swift; path = ../../../../../../../System/Volumes/Data/Users/sajjad/Desktop/SnappUI/SnappUI/Views/FavoritePlaceSection/AddFavoriteButtonView.swift; sourceTree = "<group>"; };
 		B485F48B22B41E35005BD895 /* SnappUI.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SnappUI.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B485F48E22B41E35005BD895 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B485F49022B41E35005BD895 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -198,6 +200,7 @@
 			children = (
 				B4F2ADCA22F48A72007DF66B /* FavoriteBoxView.swift */,
 				B47E091E22F49517006D8B86 /* FavoriteView.swift */,
+				B47E092022F4AAE8006D8B86 /* AddFavoriteButtonView.swift */,
 			);
 			path = FavoritePlaceSection;
 			sourceTree = "<group>";
@@ -292,6 +295,7 @@
 				B485F49122B41E35005BD895 /* SceneDelegate.swift in Sources */,
 				B4E679BE22F4696200C5BE92 /* ServiceListView.swift in Sources */,
 				B4E679C522F46D3400C5BE92 /* LeadingNavigationBarView.swift in Sources */,
+				B47E092122F4AAE8006D8B86 /* AddFavoriteButtonView.swift in Sources */,
 				B4E1119F22F3145200AD86E6 /* ServiceView.swift in Sources */,
 				B4E679C022F46A4100C5BE92 /* PriceActionsView.swift in Sources */,
 				B47E091F22F49517006D8B86 /* FavoriteView.swift in Sources */,
