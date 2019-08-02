@@ -77,7 +77,7 @@ struct ContentView : View {
                 }
             }
                 .edgesIgnoringSafeArea(.bottom)
-                .navigationBarTitle(Text(!self.showDestinationMarker ? "کجا هستید؟" : "کجا می‌روید؟"), displayMode: .inline)
+                .navigationBarTitle(Text(self.state == .source ? "کجا هستید؟" : "کجا می‌روید؟"), displayMode: .inline)
                 .navigationBarItems(
                     leading:
                     HStack {
