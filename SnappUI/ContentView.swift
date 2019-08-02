@@ -46,6 +46,7 @@ struct ContentView : View {
                                         .shadow(radius: 2, x:0, y: 3)
                                         .offset(x: -30, y: -30)
                                 }
+                                .animation(.easeIn(duration: 0.5))
                             }
                         }
                         if self.state == .source {
