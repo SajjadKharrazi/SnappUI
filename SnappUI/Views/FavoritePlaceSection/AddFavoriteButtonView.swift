@@ -12,7 +12,7 @@ struct AddFavoriteButtonView: View {
     var body: some View {
         
         HStack{
-            Image(systemName: "plus").foregroundColor(.snappForeground)
+            Image(systemName: "plus").font(Font.title.weight(.medium)).foregroundColor(.snappForeground)
             Text("افزودن آدرس منتخب").foregroundColor(.black).offset(x: -5, y:1)
         }
         .padding(.trailing,48)
