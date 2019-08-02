@@ -48,6 +48,7 @@ struct MapBoxView: View {
         Button(action: {
             self.state = .destination
             self.annotations.append(Artwork(coordinate: self.location, tag: .source))
+            self.location = CLLocationCoordinate2D(latitude: self.location.latitude * 1.0000237784, longitude: self.location.longitude * 1.0000237784)
         }){
             Image("sourceMarker")
                 .renderingMode(.original)
