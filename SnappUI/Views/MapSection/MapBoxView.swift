@@ -36,25 +36,34 @@ struct MapBoxView: View {
                 }
             }
             if self.state == .source {
-                Button(action: {
-                    self.state = .destination
-                    self.annotations.append(Artwork(coordinate: self.location, tag: .source))
-                }){
-                    Image("sourceMarker")
-                        .renderingMode(.original)
-                }
-                .offset(y: -30)
+                self.sourceMarker
             } else if self.state == .destination {
-                Button(action: {
-                    self.state = .price
-                    self.annotations.append(Artwork(coordinate: self.location, tag: .destination))
-                }){
-                    Image("destinationMarker")
-                        .renderingMode(.original)
-                }
-                .offset(y: -30)
+                self.destinationMarker
             }
         }
+    }
+    
+    
+    private var sourceMarker: some View {
+        Button(action: {
+            self.state = .destination
+            self.annotations.append(Artwork(coordinate: self.location, tag: .source))
+        }){
+            Image("sourceMarker")
+                .renderingMode(.original)
+        }
+        .offset(y: -30)
+    }
+    
+    private var destinationMarker: some View {
+        Button(action: {
+            self.state = .price
+            self.annotations.append(Artwork(coordinate: self.location, tag: .destination))
+        }){
+            Image("destinationMarker")
+                .renderingMode(.original)
+        }
+        .offset(y: -30)
     }
     
     func getUserLocation(){
