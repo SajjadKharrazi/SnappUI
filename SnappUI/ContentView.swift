@@ -70,10 +70,10 @@ struct ContentView : View {
                         }
                     }
                     if self.state != .price {
-                        InformationView(state: self.$state, geometry: geometry)
+                        InformationBoxView(state: self.$state, geometry: geometry)
                     }
                     if self.state == .price {
-                        PriceView(geometry: geometry)
+                        PriceBoxView(geometry: geometry)
                     }
                 }
             }

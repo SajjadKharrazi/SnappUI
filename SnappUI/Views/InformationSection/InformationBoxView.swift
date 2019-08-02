@@ -8,7 +8,7 @@
 
 import SwiftUI
 
-struct InformationView: View {
+struct InformationBoxView: View {
     
     @Binding var state: SnappState
     let geometry: GeometryProxy
