@@ -18,7 +18,7 @@ struct MapBoxView: View {
     
     var body: some View {
         ZStack {
-            ZStack(alignment: .bottomTrailing) {
+            ZStack(alignment: self.state == .source ? .bottomTrailing : .top) {
                 MapView(locationManager: self.$locationManager, userLocation: self.$location, annotations: self.$annotations, state: self.$state)
                 if self.state == .source {
                     Button(action: {
@@ -33,6 +33,8 @@ struct MapBoxView: View {
                             .offset(x: -30, y: -30)
                     }
                     .animation(.easeIn(duration: 0.5))
+                } else if self.state == .destination {
+                    FavoriteBoxView(annotations: self.$annotations, state: self.$state)
                 }
             }
             if self.state == .source {

@@ -14,6 +14,7 @@
 		B43E00B322BD64B30060621D /* IRANSansMobile.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B43E00AD22BD64B30060621D /* IRANSansMobile.ttf */; };
 		B43E00B422BD64B30060621D /* IRANSansMobile_Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B43E00AE22BD64B30060621D /* IRANSansMobile_Medium.ttf */; };
 		B43E00B522BD64B30060621D /* IRANSansMobile_Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B43E00AF22BD64B30060621D /* IRANSansMobile_Bold.ttf */; };
+		B47E091F22F49517006D8B86 /* FavoriteView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B47E091E22F49517006D8B86 /* FavoriteView.swift */; };
 		B485F48F22B41E35005BD895 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B485F48E22B41E35005BD895 /* AppDelegate.swift */; };
 		B485F49122B41E35005BD895 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B485F49022B41E35005BD895 /* SceneDelegate.swift */; };
 		B485F49322B41E35005BD895 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B485F49222B41E35005BD895 /* ContentView.swift */; };
@@ -31,6 +32,8 @@
 		B4E679C522F46D3400C5BE92 /* LeadingNavigationBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4E679C422F46D3400C5BE92 /* LeadingNavigationBarView.swift */; };
 		B4E679C822F46EFF00C5BE92 /* Artwork.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4E679C722F46EFE00C5BE92 /* Artwork.swift */; };
 		B4E679CA22F46F3500C5BE92 /* MapBoxView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4E679C922F46F3500C5BE92 /* MapBoxView.swift */; };
+		B4F2ADCB22F48A72007DF66B /* FavoriteBoxView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4F2ADCA22F48A72007DF66B /* FavoriteBoxView.swift */; };
+		B4F2ADCD22F48B2D007DF66B /* FavoritePlace.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4F2ADCC22F48B2D007DF66B /* FavoritePlace.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -41,6 +44,7 @@
 		B43E00AD22BD64B30060621D /* IRANSansMobile.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = IRANSansMobile.ttf; sourceTree = "<group>"; };
 		B43E00AE22BD64B30060621D /* IRANSansMobile_Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = IRANSansMobile_Medium.ttf; sourceTree = "<group>"; };
 		B43E00AF22BD64B30060621D /* IRANSansMobile_Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = IRANSansMobile_Bold.ttf; sourceTree = "<group>"; };
+		B47E091E22F49517006D8B86 /* FavoriteView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = FavoriteView.swift; path = ../../../../../../../System/Volumes/Data/Users/sajjad/Desktop/SnappUI/SnappUI/Views/FavoritePlaceSection/FavoriteView.swift; sourceTree = "<group>"; };
 		B485F48B22B41E35005BD895 /* SnappUI.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SnappUI.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B485F48E22B41E35005BD895 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B485F49022B41E35005BD895 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -60,6 +64,8 @@
 		B4E679C422F46D3400C5BE92 /* LeadingNavigationBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = LeadingNavigationBarView.swift; path = ../../../../../../../System/Volumes/Data/Users/sajjad/Desktop/SnappUI/SnappUI/Views/NavigationBarSection/LeadingNavigationBarView.swift; sourceTree = "<group>"; };
 		B4E679C722F46EFE00C5BE92 /* Artwork.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Artwork.swift; sourceTree = "<group>"; };
 		B4E679C922F46F3500C5BE92 /* MapBoxView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = MapBoxView.swift; path = ../../../../../../../System/Volumes/Data/Users/sajjad/Desktop/SnappUI/SnappUI/Views/MapSection/MapBoxView.swift; sourceTree = "<group>"; };
+		B4F2ADCA22F48A72007DF66B /* FavoriteBoxView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = FavoriteBoxView.swift; path = ../../../../../../../System/Volumes/Data/Users/sajjad/Desktop/SnappUI/SnappUI/Views/FavoritePlaceSection/FavoriteBoxView.swift; sourceTree = "<group>"; };
+		B4F2ADCC22F48B2D007DF66B /* FavoritePlace.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = FavoritePlace.swift; path = ../../../../../../System/Volumes/Data/Users/sajjad/Desktop/SnappUI/SnappUI/Models/FavoritePlace.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -133,6 +139,7 @@
 			children = (
 				B4E679C722F46EFE00C5BE92 /* Artwork.swift */,
 				B4AA0B2422F2EB270076063C /* Service.swift */,
+				B4F2ADCC22F48B2D007DF66B /* FavoritePlace.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -140,6 +147,7 @@
 		B4E111A222F3821800AD86E6 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				B4F2ADC922F48A5C007DF66B /* FavoritePlaceSection */,
 				B4E679C622F46EC100C5BE92 /* MapSection */,
 				B4E679C322F46CF800C5BE92 /* NavigationBarSection */,
 				B4E111A422F384BF00AD86E6 /* InformationSection */,
@@ -183,6 +191,15 @@
 				B4E679C922F46F3500C5BE92 /* MapBoxView.swift */,
 			);
 			path = MapSection;
+			sourceTree = "<group>";
+		};
+		B4F2ADC922F48A5C007DF66B /* FavoritePlaceSection */ = {
+			isa = PBXGroup;
+			children = (
+				B4F2ADCA22F48A72007DF66B /* FavoriteBoxView.swift */,
+				B47E091E22F49517006D8B86 /* FavoriteView.swift */,
+			);
+			path = FavoritePlaceSection;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -266,15 +283,18 @@
 				B4AA0B2222F2D3240076063C /* Utility.swift in Sources */,
 				B4E111A622F384D000AD86E6 /* InformationBoxView.swift in Sources */,
 				B4E679C822F46EFF00C5BE92 /* Artwork.swift in Sources */,
+				B4F2ADCB22F48A72007DF66B /* FavoriteBoxView.swift in Sources */,
 				B4AA0B2522F2EB270076063C /* Service.swift in Sources */,
 				B485F48F22B41E35005BD895 /* AppDelegate.swift in Sources */,
 				B4E111A122F36EA000AD86E6 /* PriceBoxView.swift in Sources */,
+				B4F2ADCD22F48B2D007DF66B /* FavoritePlace.swift in Sources */,
 				B42EC09822B4303A00F8F2FD /* MapView.swift in Sources */,
 				B485F49122B41E35005BD895 /* SceneDelegate.swift in Sources */,
 				B4E679BE22F4696200C5BE92 /* ServiceListView.swift in Sources */,
 				B4E679C522F46D3400C5BE92 /* LeadingNavigationBarView.swift in Sources */,
 				B4E1119F22F3145200AD86E6 /* ServiceView.swift in Sources */,
 				B4E679C022F46A4100C5BE92 /* PriceActionsView.swift in Sources */,
+				B47E091F22F49517006D8B86 /* FavoriteView.swift in Sources */,
 				B485F49322B41E35005BD895 /* ContentView.swift in Sources */,
 				B4E679C222F46AB800C5BE92 /* RequestSnappView.swift in Sources */,
 			);
