@@ -66,10 +66,6 @@ struct MapView: UIViewRepresentable {
             self.parent.mapCenter.center = mapView.centerCoordinate
         }
         
-        func mapView(_ mapView: MKMapView, regionWillChangeAnimated animated: Bool) {
-            return
-        }
-        
         func mapView(_ mapView: MKMapView, viewFor annotation: MKAnnotation) -> MKAnnotationView? {
             guard let annotation = annotation as? Artwork else { return nil }
             let imageName = annotation.tag == .source ? "sourceMarker" : "destinationMarker"
