@@ -18,6 +18,7 @@ enum SnappState {
 
 struct ContentView : View {
     
+    @ObjectBinding var mapCenter = MapViewModel(center: CLLocationCoordinate2D(latitude: 35.729255, longitude: 51.352264))
     @State var location = CLLocationCoordinate2D(latitude: 35.729255, longitude: 51.352264)
     @State private var annotations: [Artwork] = []
     @State private var state: SnappState = .source
@@ -26,7 +27,7 @@ struct ContentView : View {
         NavigationView {
             GeometryReader { geometry in
                 VStack {
-                    MapBoxView(location: self.$location, annotations: self.$annotations, state: self.$state)
+                    MapBoxView(mapCenter:self.mapCenter, annotations: self.$annotations, state: self.$state)
                     if self.state != .price {
                         InformationBoxView(state: self.$state, geometry: geometry)
                     }
@@ -38,7 +39,7 @@ struct ContentView : View {
                 .edgesIgnoringSafeArea(.bottom)
                 .navigationBarTitle(Text(self.state == .source ? "کجا هستید؟" : "کجا می‌روید؟"), displayMode: .inline)
                 .navigationBarItems(
-                    leading: LeadingNavigationBarView(state: self.$state, annotations: self.$annotations, location: self.$location),
+                    leading: LeadingNavigationBarView(state: self.$state, annotations: self.$annotations, mapCenter: self.mapCenter),
                     trailing: Image(systemName: "line.horizontal.3").font(.system(size: 25))
             )
         }

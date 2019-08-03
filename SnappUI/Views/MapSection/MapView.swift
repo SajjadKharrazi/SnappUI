@@ -13,8 +13,8 @@ import CoreLocation
 
 struct MapView: UIViewRepresentable {
     
+    @ObjectBinding var mapCenter: MapViewModel
     @Binding var locationManager: CLLocationManager
-    @Binding var userLocation: CLLocationCoordinate2D
     @Binding var annotations: [Artwork]
     @Binding var state: SnappState
 
@@ -30,7 +30,7 @@ struct MapView: UIViewRepresentable {
         self.locationManager.requestWhenInUseAuthorization()
         self.locationManager.startUpdatingLocation()
         
-        let coordinateRegion = MKCoordinateRegion(center: userLocation, latitudinalMeters: 1000, longitudinalMeters: 1000)
+        let coordinateRegion = MKCoordinateRegion(center: self.mapCenter.center, latitudinalMeters: 1000, longitudinalMeters: 1000)
         mapView.setRegion(coordinateRegion, animated: true)
         
         return mapView
@@ -44,7 +44,7 @@ struct MapView: UIViewRepresentable {
             view.isUserInteractionEnabled = false
         } else {
             view.addAnnotations(self.annotations)
-            let coordinateRegion = MKCoordinateRegion(center: userLocation, latitudinalMeters: 1000, longitudinalMeters: 1000)
+            let coordinateRegion = MKCoordinateRegion(center: self.mapCenter.center, latitudinalMeters: 1000, longitudinalMeters: 1000)
             view.setRegion(coordinateRegion, animated: true)
         }
     }
@@ -58,12 +58,12 @@ struct MapView: UIViewRepresentable {
         
         func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
             guard let locValue: CLLocationCoordinate2D = manager.location?.coordinate else { return }
-            self.parent.userLocation = locValue
+            self.parent.mapCenter.center = locValue
             self.parent.locationManager.stopUpdatingLocation()
         }
         
         func mapView(_ mapView: MKMapView, regionDidChangeAnimated animated: Bool) {
-            self.parent.userLocation = mapView.centerCoordinate
+            self.parent.mapCenter.center = mapView.centerCoordinate
         }
         
         func mapView(_ mapView: MKMapView, regionWillChangeAnimated animated: Bool) {

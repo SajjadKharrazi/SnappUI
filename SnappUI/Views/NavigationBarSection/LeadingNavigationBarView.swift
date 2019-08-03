@@ -14,13 +14,13 @@ struct LeadingNavigationBarView: View {
     
     @Binding var state: SnappState
     @Binding var annotations: [Artwork]
-    @Binding var location: CLLocationCoordinate2D
+    @ObjectBinding var mapCenter: MapViewModel
     
     var body: some View {
         HStack {
             if self.state == .destination {
                 Button(action: {
-                    self.location = CLLocationCoordinate2D(latitude: self.annotations.first!.coordinate.latitude, longitude: self.annotations.first!.coordinate.longitude)
+                    self.mapCenter.center = CLLocationCoordinate2D(latitude: self.annotations.first!.coordinate.latitude, longitude: self.annotations.first!.coordinate.longitude)
                     self.state = .source
                     self.annotations.removeAll()
                 }){
@@ -32,7 +32,7 @@ struct LeadingNavigationBarView: View {
             }
             Button(action: {
                 if self.state == .price {
-                    self.location = CLLocationCoordinate2D(latitude: self.annotations.last!.coordinate.latitude, longitude: self.annotations.last!.coordinate.longitude)
+                    self.mapCenter.center = CLLocationCoordinate2D(latitude: self.annotations.last!.coordinate.latitude, longitude: self.annotations.last!.coordinate.longitude)
                     self.state = .destination
                     self.annotations.removeLast()
                 }

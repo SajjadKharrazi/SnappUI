@@ -14,6 +14,7 @@
 		B43E00B322BD64B30060621D /* IRANSansMobile.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B43E00AD22BD64B30060621D /* IRANSansMobile.ttf */; };
 		B43E00B422BD64B30060621D /* IRANSansMobile_Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B43E00AE22BD64B30060621D /* IRANSansMobile_Medium.ttf */; };
 		B43E00B522BD64B30060621D /* IRANSansMobile_Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B43E00AF22BD64B30060621D /* IRANSansMobile_Bold.ttf */; };
+		B440316422F5AD3E00881825 /* MapViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B440316322F5AD3E00881825 /* MapViewModel.swift */; };
 		B47E091F22F49517006D8B86 /* FavoriteView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B47E091E22F49517006D8B86 /* FavoriteView.swift */; };
 		B47E092122F4AAE8006D8B86 /* AddFavoriteButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B47E092022F4AAE8006D8B86 /* AddFavoriteButtonView.swift */; };
 		B485F48F22B41E35005BD895 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B485F48E22B41E35005BD895 /* AppDelegate.swift */; };
@@ -45,6 +46,7 @@
 		B43E00AD22BD64B30060621D /* IRANSansMobile.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = IRANSansMobile.ttf; sourceTree = "<group>"; };
 		B43E00AE22BD64B30060621D /* IRANSansMobile_Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = IRANSansMobile_Medium.ttf; sourceTree = "<group>"; };
 		B43E00AF22BD64B30060621D /* IRANSansMobile_Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = IRANSansMobile_Bold.ttf; sourceTree = "<group>"; };
+		B440316322F5AD3E00881825 /* MapViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = MapViewModel.swift; path = ../../../../../../System/Volumes/Data/Users/sajjad/Desktop/SnappUI/SnappUI/ViewModels/MapViewModel.swift; sourceTree = "<group>"; };
 		B47E091E22F49517006D8B86 /* FavoriteView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = FavoriteView.swift; path = ../../../../../../../System/Volumes/Data/Users/sajjad/Desktop/SnappUI/SnappUI/Views/FavoritePlaceSection/FavoriteView.swift; sourceTree = "<group>"; };
 		B47E092022F4AAE8006D8B86 /* AddFavoriteButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = AddFavoriteButtonView.swift; path = ../../../../../../../System/Volumes/Data/Users/sajjad/Desktop/SnappUI/SnappUI/Views/FavoritePlaceSection/AddFavoriteButtonView.swift; sourceTree = "<group>"; };
 		B485F48B22B41E35005BD895 /* SnappUI.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SnappUI.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -94,6 +96,14 @@
 			path = Fonts;
 			sourceTree = "<group>";
 		};
+		B440316222F5AD2E00881825 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				B440316322F5AD3E00881825 /* MapViewModel.swift */,
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
 		B485F48222B41E35005BD895 = {
 			isa = PBXGroup;
 			children = (
@@ -113,6 +123,7 @@
 		B485F48D22B41E35005BD895 /* SnappUI */ = {
 			isa = PBXGroup;
 			children = (
+				B440316222F5AD2E00881825 /* ViewModels */,
 				B4E111A222F3821800AD86E6 /* Views */,
 				B4AA0B2322F2EB170076063C /* Models */,
 				B43E00B622BD64BD0060621D /* Fonts */,
@@ -293,6 +304,7 @@
 				B4F2ADCD22F48B2D007DF66B /* FavoritePlace.swift in Sources */,
 				B42EC09822B4303A00F8F2FD /* MapView.swift in Sources */,
 				B485F49122B41E35005BD895 /* SceneDelegate.swift in Sources */,
+				B440316422F5AD3E00881825 /* MapViewModel.swift in Sources */,
 				B4E679BE22F4696200C5BE92 /* ServiceListView.swift in Sources */,
 				B4E679C522F46D3400C5BE92 /* LeadingNavigationBarView.swift in Sources */,
 				B47E092122F4AAE8006D8B86 /* AddFavoriteButtonView.swift in Sources */,

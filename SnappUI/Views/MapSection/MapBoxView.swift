@@ -11,15 +11,15 @@ import MapKit
 
 struct MapBoxView: View {
     
+    @ObjectBinding var mapCenter: MapViewModel
     @State var locationManager = CLLocationManager()
-    @Binding var location: CLLocationCoordinate2D
     @Binding var annotations: [Artwork]
     @Binding var state: SnappState
     
     var body: some View {
         ZStack {
             ZStack(alignment: self.state == .source ? .bottomTrailing : .top) {
-                MapView(locationManager: self.$locationManager, userLocation: self.$location, annotations: self.$annotations, state: self.$state)
+                MapView(mapCenter: self.mapCenter, locationManager: self.$locationManager, annotations: self.$annotations, state: self.$state)
                 if self.state == .source {
                     Button(action: {
                         self.getUserLocation()
@@ -49,8 +49,8 @@ struct MapBoxView: View {
     private var sourceMarker: some View {
         Button(action: {
             self.state = .destination
-            self.annotations.append(Artwork(coordinate: self.location, tag: .source))
-            self.location = CLLocationCoordinate2D(latitude: self.location.latitude * 1.0000237784, longitude: self.location.longitude * 1.0000237784)
+            self.annotations.append(Artwork(coordinate: self.mapCenter.center, tag: .source))
+            self.mapCenter.center = CLLocationCoordinate2D(latitude: self.mapCenter.center.latitude * 1.0000237784, longitude: self.mapCenter.center.longitude * 1.0000237784)
         }){
             Image("sourceMarker")
                 .renderingMode(.original)
@@ -61,7 +61,7 @@ struct MapBoxView: View {
     private var destinationMarker: some View {
         Button(action: {
             self.state = .price
-            self.annotations.append(Artwork(coordinate: self.location, tag: .destination))
+            self.annotations.append(Artwork(coordinate: self.mapCenter.center, tag: .destination))
         }){
             Image("destinationMarker")
                 .renderingMode(.original)
