@@ -10,16 +10,9 @@ import SwiftUI
 import MapKit
 import CoreLocation
 
-enum SnappState {
-    case source
-    case destination
-    case price
-}
-
 struct ContentView : View {
     
     @ObjectBinding var mapCenter = MapViewModel(center: CLLocationCoordinate2D(latitude: 35.729255, longitude: 51.352264))
-    @State var location = CLLocationCoordinate2D(latitude: 35.729255, longitude: 51.352264)
     @State private var annotations: [Artwork] = []
     @State private var state: SnappState = .source
     
@@ -27,7 +20,7 @@ struct ContentView : View {
         NavigationView {
             GeometryReader { geometry in
                 VStack {
-                    MapBoxView(mapCenter:self.mapCenter, annotations: self.$annotations, state: self.$state)
+                    MapBoxView(mapCenter: self.mapCenter, annotations: self.$annotations, state: self.$state)
                     if self.state != .price {
                         InformationBoxView(state: self.$state, geometry: geometry)
                     }

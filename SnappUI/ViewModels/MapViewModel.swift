@@ -10,6 +10,12 @@ import SwiftUI
 import Combine
 import MapKit
 
+enum SnappState {
+    case source
+    case destination
+    case price
+}
+
 class MapViewModel: BindableObject {
     var willChange = PassthroughSubject<Void, Never>()
     
