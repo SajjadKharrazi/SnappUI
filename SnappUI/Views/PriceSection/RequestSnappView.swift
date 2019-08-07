@@ -20,7 +20,7 @@ struct RequestSnappView: View {
                 .minimumScaleFactor(0.01)
                 .font(.custom("IRANSansMobileFaNum-Bold",size: 18))
                 .frame(width: UIScreen.main.bounds.width - 190, height: 55 + geometry.safeAreaInsets.bottom/2)
-                .background(Color.snappForeground).foregroundColor(.white)
+                .background(Color.snappForeground).foregroundColor(.white).animation(.easeInOut)
             Spacer()
         }
         .background(Color.snappBackground)
