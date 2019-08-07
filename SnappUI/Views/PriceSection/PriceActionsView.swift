@@ -10,19 +10,24 @@ import SwiftUI
 
 struct PriceActionsView: View {
     
-    @Binding var showPrice: Int
+    @Binding var serviceViewModel: ServiceViewModel
+    @State private var showPrice: Int = 0
     
     var body: some View {
+        
         HStack{
             Text("گزینه‌ها").frame(width:85).foregroundColor(.snappForeground).font(.custom("IRANSansMobileFaNum-Bold",size: 16))
             Image(uiImage: UIImage()).resizable().frame(width:1).background(Color.snappTextDisabled)
             Spacer()
             Text("ریال").minimumScaleFactor(0.01).foregroundColor(.snappTextDisabled)
-            Text("\(self.showPrice)").foregroundColor(.snappBackground).font(.custom("IRANSansMobileFaNum-Medium",size: 25))
+            Text("\(self.serviceViewModel.showPrice)").foregroundColor(.snappBackground).font(.custom("IRANSansMobileFaNum-Medium",size: 25))
             Spacer()
             Image(uiImage: UIImage()).resizable().frame(width:1).background(Color.snappTextDisabled)
             Text("کد تخفیف؟").frame(width:85).foregroundColor(.snappForeground).font(.custom("IRANSansMobileFaNum-Bold",size: 16))
         }
         .frame(height: 45)
+            .onAppear {
+                print("Ssssssssssssss")
+        }
     }
 }

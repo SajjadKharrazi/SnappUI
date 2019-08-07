@@ -9,14 +9,16 @@
 import SwiftUI
 
 struct PriceBoxView: View {
-
+    
     let geometry: GeometryProxy
-    @State private var showPrice = 0
+    let mainPrice = Double.random(in: 100000...200000)
+    
+    @State var serviceViewModel = ServiceViewModel()
     
     var body: some View {
         VStack {
-            ServiceListView(showPrice: $showPrice)
-            PriceActionsView(showPrice: $showPrice)
+            ServiceListView(serviceViewModel: self.$serviceViewModel, mainPrice: self.mainPrice)
+            PriceActionsView(serviceViewModel: self.$serviceViewModel)
             RequestSnappView(geometry: self.geometry)
         }
     }
