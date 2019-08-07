@@ -14,6 +14,7 @@ struct Service: Identifiable {
     let name: String
     let type: String
     let image: String
+    let buttonName: String
     let ratio: Double
     var selected: Bool = false
 }

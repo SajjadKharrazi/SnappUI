@@ -19,7 +19,7 @@ struct PriceBoxView: View {
         VStack {
             ServiceListView(serviceViewModel: self.$serviceViewModel, mainPrice: self.mainPrice)
             PriceActionsView(serviceViewModel: self.$serviceViewModel)
-            RequestSnappView(geometry: self.geometry)
+            RequestSnappView(serviceViewModel: self.$serviceViewModel, geometry: self.geometry)
         }
     }
 }

@@ -38,9 +38,9 @@ struct ServiceListView: View {
         
         for defaultService in self.serviceViewModel.services {
             if defaultService.type == service.type {
-                defaultServices.append(Service(id: defaultService.id, name: defaultService.name, type: defaultService.type, image: defaultService.image, ratio: defaultService.ratio, selected: true))
+                defaultServices.append(Service(id: defaultService.id, name: defaultService.name, type: defaultService.type, image: defaultService.image, buttonName: defaultService.buttonName, ratio: defaultService.ratio, selected: true))
             } else {
-                defaultServices.append(Service(id: defaultService.id, name: defaultService.name, type: defaultService.type, image: defaultService.image, ratio: defaultService.ratio, selected: false))
+                defaultServices.append(Service(id: defaultService.id, name: defaultService.name, type: defaultService.type, image: defaultService.image, buttonName:defaultService.buttonName, ratio: defaultService.ratio, selected: false))
             }
         }
         
